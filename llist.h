@@ -26,14 +26,14 @@ llist Llist(char *name, node *head){
 	return nllist;
 }
 
-void append(llist l, node *n){
-	if(l.head != NULL){
-		node *temp = l.head;
+void append(llist *l, node *n){
+	if(l->head != NULL){
+		node *temp = l->head;
 		while(temp->next != NULL)
 			temp = temp-> next;
 		temp->next = n;
 	}else{
-		l.head = n;
+		l->head = n;
 	}
 }
 
